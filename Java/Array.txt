@@ -1,0 +1,23 @@
+Syntax: 
+	dataType[] arrayVariable = new dataType[size];
+	dataType[] arrayVariable = {v0,v1,.....vn};
+	
+Example: 
+	import java.util.Scanner;
+	public class ArrayCode
+	{
+		public static void main(String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			int num[] = new int[5];
+			for (int x=0; x<num.length; x++)
+			{
+				System.out.print("Enter Number: ");
+				num[x] = inpt.nextInt();
+			}
+			for (int x=0; x<num.length; x++)
+			{
+				System.out.print(num[x]+",");
+			}
+		}
+	}

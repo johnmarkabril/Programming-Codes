@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Final Project</title>
+		<script type="text/javascript">
+			function register()
+			{
+				var getDataJS = new Array()
+				{
+					getDataJS[0] = document.getElementById('fname').value;
+					getDataJS[1] = document.getElementById('lname').value;
+					getDataJS[2] = document.getElementById('email').value;
+					getDataJS[3] = document.getElementById('pword').value;
+					getDataJS[4] = document.getElementById('conpword').value;
+				}
+				
+				var displayErrorJS = new Array()
+				{
+					displayErrorJS[0] = "<span style='color:red'>Please type your First Name!</span>"
+					displayErrorJS[1] = "<span style='color:red'>Please type your Last Name!</span>"
+					displayErrorJS[2] = "<span style='color:red'>Please type your Email Address!</span>"
+					displayErrorJS[3] = "<span style='color:red'>Please type your Password!</span>"
+					displayErrorJS[4] = "<span style='color:red'>Please confirm your Password!</span>"
+				}
+				
+				
+				var formId = new Array("er_fname", "er_lname", "er_email", "er_pword", "er_conpword")
+				{
+					for ( x in getDataJS )
+					{
+						var error = displayErrorJS[x];
+						var div = formId[x];
+						
+						if ( getDataJS[x] == "" )
+						{
+							document.getElementById(div).innerHTML = error;
+						}
+						else
+						{
+							document.getElementById(div).innerHTML = "OK!";
+						}
+					}
+				}
+			}
+			function passwordConfirmation()
+			{
+				var fPass = document.getElementById('pword').value;
+				var conPass = document.getElementById('conpword').value;
+				
+				if ( conPass == fPass )
+				{
+					document.getElementById('er_conpword').innerHTML = "OK !";
+				}
+				else
+				{
+					document.getElementById('error_conpword').innerHTML = "<span style='color:red'>Your password doesnt match!</span>";
+				}
+			}
+		</script>
+		
+		<link rel=StyleSheet href="CSSCode.css" type="text/css">
+	</head>
+	<body>
+	
+		<div id="header">REGISTRATION FORM</div><br />
+		<form>
+			<center>
+				<table border="0">
+					<tr>
+						<td>First Name:</td>
+						<td><input type="text" name="fname" id="fname" onkeyup="register()" /></td>
+						<td><div id="er_fname"></div></td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td><input type="text" name="lname" id="lname" onkeyup="register()" /></td>
+						<td><div id="er_lname"></div></td>
+					</tr>
+					<tr>
+						<td>Email Address:</td>
+						<td><input type="text" name="email" id="email"  onkeyup="register()"/></td>
+						<td><div id="er_email"></div></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" name="pword" id="pword"  onkeyup="register()"/></td>
+						<td><div id="er_pword"></div></td>
+					</tr>
+					<tr>
+						<td>Confirm Password:</td>
+						<td><input type="password" name="conpword" id="conpword" onkeyup="passwordConfirmation()"/></td>
+						<td><div id="er_conpword"></div></td>
+					</tr>
+				</table>
+				<br />
+				<input type="button" name="submit" value="submit"/>
+			</center>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+	var test_string = prompt("Enter strings:");
+	var test_num = prompt("Enter number: ");
+	var test_break = prompt("Line Break [Integer between [1 - " + test_num + "]: ");
+	var x = 1;
+	
+	for (x=1; x<=test_num; x++)
+	{
+		if (x>test_break)
+		{
+			break;
+		}
+		document.write(x + ". " + test_string + "<br />");
+	}
+
+</script>

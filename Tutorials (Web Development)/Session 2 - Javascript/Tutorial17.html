@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Building Objects</title>
+		<script type="text/javascript">
+			function info(name, age, locas)
+			{
+				this.name = name;
+				this.age = age;
+				this.locas = locas;
+			}
+			var names = prompt("Enter your name:");
+			var ages = prompt("Enter your age: ");
+			var locs = prompt("Enter location: ");
+			
+			var infoPri = new info (names, ages, locs);
+			
+			document.write("Your name is: " + infoPri.name + "<br />");
+			document.write("Your age is: " + infoPri.age + "<br />");
+			document.write("Your location is: " + infoPri.locas + "<br />");
+		</script>
+	</head>
+	
+	<body>
+	 
+	</body>
+</html>
+	

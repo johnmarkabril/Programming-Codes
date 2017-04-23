@@ -1,0 +1,37 @@
+Name: IfElseIfStatement
+
+Syntax: 
+	if (condition 1){
+		//Statements
+	}
+	else if (condition 2){
+		//Statements
+	}
+	else {
+		//Statements
+	}
+	
+Example:
+	import java.util.Scanner;
+	public class IfElseIfStatement 
+	{
+		public static void main(String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			System.out.print("Enter your age: ");
+			int age = inpt.nextInt();
+			
+			if ( age<=17 )
+			{
+				System.out.print("Too young to vote!");
+			}
+			else if (age >= 18)
+			{
+				System.out.print("Allowed to Vote");
+			}
+			else
+			{
+				System.out.print("INVALID");
+			}
+		}
+	}

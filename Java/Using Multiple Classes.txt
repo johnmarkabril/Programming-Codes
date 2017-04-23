@@ -1,0 +1,19 @@
+Syntax: in Main Class
+	ClassName ObjectName = new ClassName();
+	ObjectName.MathodName();
+	
+Code:
+Name: MainApple.java
+	public class MainApple{
+		public static void main(String[] args){
+			Tuna TunaObject = new Tune();
+			TunaObject.SimpleMessage();
+		}
+	}
+	
+Name: Tuna.java
+	public class Tuna{
+		public void SimpleMessage(){
+			System.out.println("This is another class");
+		}
+	}

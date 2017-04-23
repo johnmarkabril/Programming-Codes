@@ -1,0 +1,32 @@
+Syntax:
+	for (declaration:expression)
+	{
+		//Statements
+	}
+	
+Code:
+	import java.util.ArrayList;
+	import java.util.Scanner;
+
+	public class ArrayListActivities 
+	{
+		public static void main( String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			
+			ArrayList<String> names = new ArrayList<String>();
+			String n;
+			System.out.println("Enter 10 names: ");
+			for (int x=0; x<10; x++)
+			{
+				n = inpt.next();
+				names.add(n);
+			}
+			for (String x : names)
+			{
+				System.out.print(x + " , ");
+			}
+			
+			
+		}
+	}

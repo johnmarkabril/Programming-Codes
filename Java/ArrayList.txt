@@ -1,0 +1,40 @@
+Syntax:
+	ArrayList<BaseType> ArrayListIdentifier = new ArrayList<BaseType>();
+	
+Code:
+	import java.util.ArrayList;
+	import java.util.Scanner;
+
+	public class ArrayListActivities 
+	{
+		public static void main( String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			
+			ArrayList<String> names = new ArrayList<String>();
+			String n, Srch_name;
+			System.out.println("Enter 10 names: ");
+			for (int x=0; x<10; x++)
+			{
+				n = inpt.next();
+				names.add(n);
+			}
+			for (String x : names)
+			{
+				System.out.print(x + " , ");
+			}
+			System.out.println();
+			System.out.print("Search name: ");
+			Srch_name = inpt.next();
+				if (names.contains(Srch_name))
+				{
+					System.out.println("Record Found");
+					System.out.print("Located at index "+names.indexOf(Srch_name));
+				}
+				else
+				{
+					System.out.println("Record Not Found");
+				}
+			
+		}
+	}

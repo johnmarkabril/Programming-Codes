@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>OOP</title>
+		<script type="text/javascript">
+		
+		var num1 = prompt("Enter 1st number: ");
+		var num2 = prompt("Enter 2nd number: ");
+		
+		function Calculator ()
+		{
+			this.Addition = function(val1, val2)
+			{
+				return(val1+val2);
+			}
+			this.Subtraction = function(val1, val2)
+			{
+				return(val1-val2);
+			}
+			this.Multiplication = function(val1, val2)
+			{
+				return(val1*val2);
+			}
+			this.Division = function(val1, val2)
+			{
+				return(val1/val2);
+			}
+		}
+		
+		var calc = new Calculator();
+		
+		var choose = prompt("Choose [Add, Subtract, Multiply, Divide]: ");
+		if (choose == "Add")
+		{
+			alert(calc.Addition(num1, num2));
+		}
+		else if (choose == "Subtract")
+		{
+			alert(calc.Subtraction(num1, num2));
+		}
+		else if (choose == "Multiply")
+		{
+			alert(calc.Multiplication(num1, num2));
+		}
+		else if (choose == "Divide")
+		{
+			alert(calc.Division(num1, num2));
+		}
+		else
+		{
+			alert("ERROR: Invalid !");
+		}
+		
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Basic Login</title>
+		<script type="text/javascript">
+			
+			var register = prompt("You are not registered, please type a password to register: ");
+			
+			function success()
+			{
+				document.write("SUCCESS! You are now in the registered users page");
+			}
+			
+			function failed()
+			{
+				document.write("WRONG PASSWORD! You are now in the non-registered users page");
+			}
+			
+			if (register!="")
+			{
+				var user = prompt("You have registered with a valid password, please confirm your password to proceed to the users page");
+				
+				if (register == user)
+				{
+					success();
+				}
+				else
+				{
+					failed();
+				}	
+			}
+			else
+			{
+				alert("ERROR: You have to type something as a password!");
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>

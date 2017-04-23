@@ -1,0 +1,29 @@
+Syntax: 
+	public void MethodName(Parameters){
+		//Statement
+	}
+	
+	
+Code:
+Name: Tuna.java
+	public class Tuna{
+		public void SimpleMess(String name){
+			System.out.println("Hello "+ name);
+		}
+	}
+	
+
+Name: MainApples.java
+import java.util.Scanner;
+	public class MainApples{
+		public static void main(String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			Tuna TunaObject = new Tuna();
+			
+			System.out.print("Enter your name here: ");
+			String EntName = input.nextLine();
+			
+			TunaObject.SimpleMess(EntName);
+		}
+	}

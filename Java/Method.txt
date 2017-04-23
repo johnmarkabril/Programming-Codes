@@ -1,0 +1,25 @@
+Code: 
+	import java.util.Scanner;
+	public class MethodLesson 
+	{	
+		public static void main(String[] args)
+		{
+			Scanner inpt = new Scanner(System.in);
+			int x, y;
+			
+			System.out.print("No. 1: ");
+			x = inpt.nextInt();
+			System.out.print("No. 2: ");
+			y = inpt.nextInt();
+			minFunction(x,y);
+		}
+		public static int minFunction(int n1, int n2)
+		{
+			int sum; 
+				sum = n1 + n2;
+				System.out.println("Sum: "+sum);
+				sum = n1 - n2;
+				System.out.println("Difference: "+sum);
+		return sum; 
+		}
+	}
